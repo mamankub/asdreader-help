@@ -1,0 +1,11 @@
+title: ASDReader
+description: คู่มือ วิธีใช้ และช่วยเหลือ สำหรับโปรแกรมอ่านและแก้ไข PDF ASDReader
+lang: th
+baseurl: /asdreader-help
+url: https://mamankub.github.io
+markdown: kramdown
+kramdown:
+  auto_ids: true
+exclude:
+  - README.md
+  - LICENSE

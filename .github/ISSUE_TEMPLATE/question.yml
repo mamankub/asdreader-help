@@ -1,0 +1,10 @@
+name: สอบถาม / ขอฟีเจอร์
+description: ถามวิธีใช้งาน หรือเสนอความสามารถใหม่
+labels: [question]
+body:
+  - type: textarea
+    id: question
+    attributes:
+      label: รายละเอียด
+    validations:
+      required: true
