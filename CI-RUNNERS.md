@@ -5,11 +5,11 @@ is allowed. Missing runners leave required checks pending and must be reported.
 
 ## Routing
 
-- Linux: `self-hosted, Linux, X64` (or `ARM64`), `asd-ci`, plus the requested
+- Linux: `self-hosted, Linux, X64`, `asd-ci`, plus the requested
   `ubuntu-24.04` or `ubuntu-22.04` environment label. Use an actual matching OS image.
-- Windows: `self-hosted, Windows, X64` (or `ARM64`), `asd-ci`. Windows GUI tests
+- Windows: `self-hosted, Windows, X64`, `asd-ci`. Windows GUI tests
   require a logged-in desktop session. Do not claim ARM64 coverage from x64 tests.
-- macOS: `self-hosted, macOS, ARM64` (or `X64` where requested), `asd-ci`.
+- macOS and native ARM64 execution are temporarily paused by owner instruction.
 - asd-project-library retains its existing `asd-library-ci` runner and test harness.
 
 The original matrix image names remain compatibility keys, not hosted runner
@@ -37,3 +37,11 @@ Installing runner software alone is not evidence that application tests passed.
 
 No GitHub Actions workflow was present on the audited default branch. This policy
 applies when CI is introduced; this change does not add unnecessary CI jobs.
+
+## Temporary CI platform scope (owner instruction, 2026-11-10)
+
+Run CI only on the owner's Linux x64 and Windows x64 runners for now. macOS,
+ARM64, FreeBSD and RISC-V platform jobs are paused; do not report them as tested.
+Keep web/portable checks that execute on Linux/Windows x64. Restore additional
+platform coverage only after owner approval and verification of matching owned
+runners. No GitHub-hosted fallback is permitted.
