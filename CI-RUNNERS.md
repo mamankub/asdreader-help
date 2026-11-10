@@ -35,8 +35,10 @@ macOS requires the matching Xcode/SDK and Rust toolchain.
 Do not run hosted-image disk cleanup against a persistent self-hosted machine.
 Installing runner software alone is not evidence that application tests passed.
 
-No GitHub Actions workflow was present on the audited default branch. This policy
-applies when CI is introduced; this change does not add unnecessary CI jobs.
+GitHub Pages previously used an implicit legacy build, outside repository workflow files.
+Pages must use build_type=workflow and .github/workflows/pages.yml. Both Jekyll
+build (Docker required) and deployment execute on owned Ubuntu 24.04 x64 VMs.
+Do not switch Pages back to legacy/branch builds: GitHub generates hosted jobs.
 
 ## Temporary CI platform scope (owner instruction, 2026-11-10)
 
