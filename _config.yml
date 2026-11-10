@@ -9,3 +9,5 @@ kramdown:
 exclude:
   - README.md
   - LICENSE
+  - AGENTS.md
+  - CI-RUNNERS.md
